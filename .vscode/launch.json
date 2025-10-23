@@ -1,0 +1,61 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "🚀 Debug SENAI API",
+            "request": "launch",
+            "mainClass": "com.exemplo.meuapp.Main",
+            "projectName": "meuapp",
+            "args": "",
+            "vmArgs": "-Dspring.profiles.active=dev",
+            "env": {
+                "SPRING_PROFILES_ACTIVE": "dev"
+            },
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "java",
+            "name": "🧪 Debug Tests",
+            "request": "launch",
+            "mainClass": "",
+            "projectName": "meuapp",
+            "vmArgs": "-Dspring.profiles.active=test",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "🔧 Debug with Profile",
+            "request": "launch",
+            "mainClass": "com.exemplo.meuapp.Main",
+            "projectName": "meuapp",
+            "args": "",
+            "vmArgs": "-Dspring.profiles.active=${input:profile}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "🌐 Debug on Port 8080",
+            "request": "launch",
+            "mainClass": "com.exemplo.meuapp.Main",
+            "projectName": "meuapp",
+            "args": "",
+            "vmArgs": "-Dserver.port=8080 -Dspring.profiles.active=dev",
+            "console": "integratedTerminal"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "profile",
+            "description": "Spring Profile",
+            "default": "dev",
+            "type": "pickString",
+            "options": [
+                "dev",
+                "test",
+                "prod"
+            ]
+        }
+    ]
+}

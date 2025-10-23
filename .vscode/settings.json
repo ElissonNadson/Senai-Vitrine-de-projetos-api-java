@@ -1,0 +1,63 @@
+{
+    // ☕ Java Configuration
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.saveActions.organizeImports": true,
+    "java.imports.removeUnused": true,
+    "java.codeGeneration.insertionLocation": "afterCursor",
+    "java.errors.incompleteClasspath.severity": "warning",
+    "java.clean.workspace": false,
+    // 🌿 Spring Boot
+    "spring-boot.ls.problem.application-properties.enabled": true,
+    "spring-boot.ls.problem.application-yaml.enabled": true,
+    // 🔧 Maven
+    "maven.downloadSources": true,
+    "maven.downloadJavadoc": true,
+    // 📝 Editor
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "editor.rulers": [
+        120
+    ],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    // 📁 Files
+    "files.exclude": {
+        "**/target": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    // 🔍 Search
+    "search.exclude": {
+        "**/target": true,
+        "**/node_modules": true,
+        "**/.git": true
+    },
+    // 🔗 Terminal
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "dbcode.connections": [
+        {
+            "connectionId": "Va6UYD-bDpLlYcdNWpXwS",
+            "name": "SENAI Database",
+            "driver": "postgres",
+            "color": "#FF642F",
+            "connectionType": "host",
+            "host": "147.79.86.117",
+            "port": 10103,
+            "ssl": false,
+            "username": "postgres",
+            "password": "",
+            "savePassword": "secretStorage",
+            "database": "senai",
+            "readOnly": false,
+            "connectionTimeout": 30
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "recommendations": [
+        // ☕ Java Essentials
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-lombok",
+        "redhat.vscode-xml",
+        // 🌿 Spring Boot
+        "pivotal.vscode-spring-boot",
+        "vscjava.vscode-spring-initializr",
+        "vscjava.vscode-spring-boot-dashboard",
+        // 📝 Development Tools
+        "ms-vscode.vscode-json",
+        "humao.rest-client",
+        "rangav.vscode-thunder-client",
+        // 🎨 UI/UX Enhancement
+        "pkief.material-icon-theme",
+        "aaron-bond.better-comments",
+        "oderwat.indent-rainbow",
+        "usernamehw.errorlens",
+        // 📋 Productivity  
+        "formulahendry.code-runner",
+        "gruntfuggly.todo-tree",
+        "alefragnani.bookmarks",
+        "christian-kohler.path-intellisense",
+        // 🔄 Version Control
+        "eamodio.gitlens",
+        "donjayamanne.githistory",
+        "mhutchie.git-graph",
+        // 🔧 Utilities
+        "ms-vscode.powershell",
+        "ms-vscode.live-server",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+    ]
+}
