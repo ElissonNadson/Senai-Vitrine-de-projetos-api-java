@@ -1,0 +1,89 @@
+# Spring Boot Production Configuration for Render
+spring:
+  application:
+    name: senai-api
+
+  # PostgreSQL Database configuration for Render
+  datasource:
+    url: ${DATABASE_URL}
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        temp:
+          use_jdbc_metadata_defaults: false
+
+  # Desabilitar H2 Console em produção
+  h2:
+    console:
+      enabled: false
+
+  # Web configuration
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+  # Actuator
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health,info
+    endpoint:
+      health:
+        show-details: when-authorized
+
+# API Security configuration
+api:
+  security:
+    token:
+      secret: ${API_SECRET}
+
+# OpenAPI/Swagger configuration
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+    tryItOutEnabled: true
+    filter: true
+
+# Server configuration
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: on-param
+    include-exception: false
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.exemplo.meuapp: INFO
+    org.springframework.web: INFO
+    org.hibernate: WARN
